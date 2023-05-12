@@ -1,4 +1,4 @@
-package ru.zharinov.javacourse1.introduced.firstproject;
+package ru.zharinov.javacourse1.introduction.firstproject;
 
 public class HelloWorld {
     public static void main(String[] args) {

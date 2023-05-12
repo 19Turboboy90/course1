@@ -1,4 +1,4 @@
-package ru.zharinov.javacourse1.introduced.hw;
+package ru.zharinov.javacourse1.introduction.hw;
 
 /*
 Создать новый класс, который будет выводить имена членов вашей семьи, каждое с новой строки.
