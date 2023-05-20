@@ -1,4 +1,4 @@
-package ru.zharinov.javacourse1.oop.inheritance.hw;
+package ru.zharinov.javacourse1.oop.inheritance_1.hw;
 
 /*
 Создать клас BoxWeight (весовая коробка), которая наследуется от Box с дополнительным полем weight(вес).

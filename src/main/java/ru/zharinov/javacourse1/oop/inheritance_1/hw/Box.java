@@ -1,4 +1,4 @@
-package ru.zharinov.javacourse1.oop.inheritance.hw;
+package ru.zharinov.javacourse1.oop.inheritance_1.hw;
 
 public class Box {
     double width;

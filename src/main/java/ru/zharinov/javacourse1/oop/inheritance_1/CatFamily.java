@@ -1,4 +1,4 @@
-package ru.zharinov.javacourse1.oop.inheritance;
+package ru.zharinov.javacourse1.oop.inheritance_1;
 
 public class CatFamily {
     private int ears;
