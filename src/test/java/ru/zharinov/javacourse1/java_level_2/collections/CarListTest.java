@@ -52,10 +52,6 @@ public class CarListTest {
     }
 
     @Test
-    public void size() {
-    }
-
-    @Test
     public void clear() {
         carList.clear();
         assertEquals(0, carList.size());
@@ -64,5 +60,26 @@ public class CarListTest {
     @Test(expected = IndexOutOfBoundsException.class)
     public void indexOutOfBoundsExceptions() {
         carList.get(100);
+    }
+
+    @Test
+    public void addElementIntroMiddle() {
+        Car car = new Car("BMW", 1);
+        carList.add(car, 50);
+        assertEquals(car, carList.get(50));
+    }
+
+    @Test
+    public void addElementIntroFirstPosition() {
+        Car car = new Car("BMW", 1);
+        carList.add(car, 0);
+        assertEquals(car, carList.get(0));
+    }
+
+    @Test
+    public void addElementIntroLastPosition() {
+        Car car = new Car("BMW", 1);
+        carList.add(car, 100);
+        assertEquals(car, carList.get(100));
     }
 }
