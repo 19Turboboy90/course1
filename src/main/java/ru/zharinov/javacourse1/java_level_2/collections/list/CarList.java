@@ -1,4 +1,6 @@
-package ru.zharinov.javacourse1.java_level_2.collections;
+package ru.zharinov.javacourse1.java_level_2.collections.list;
+
+import ru.zharinov.javacourse1.java_level_2.collections.Car;
 
 public interface CarList {
     Car get(int index);

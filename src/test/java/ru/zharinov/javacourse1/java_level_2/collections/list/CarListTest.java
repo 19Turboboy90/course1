@@ -1,7 +1,8 @@
-package ru.zharinov.javacourse1.java_level_2.collections;
+package ru.zharinov.javacourse1.java_level_2.collections.list;
 
 import org.junit.Before;
 import org.junit.Test;
+import ru.zharinov.javacourse1.java_level_2.collections.Car;
 
 import static org.junit.Assert.*;
 

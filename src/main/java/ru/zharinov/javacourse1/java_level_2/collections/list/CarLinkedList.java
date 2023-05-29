@@ -1,5 +1,7 @@
-package ru.zharinov.javacourse1.java_level_2.collections;
+package ru.zharinov.javacourse1.java_level_2.collections.list;
 
+
+import ru.zharinov.javacourse1.java_level_2.collections.Car;
 
 public class CarLinkedList implements CarList {
     private Node first;
@@ -23,7 +25,6 @@ public class CarLinkedList implements CarList {
         }
         size++;
     }
-
 
     @Override
     public void add(Car car, int index) {
