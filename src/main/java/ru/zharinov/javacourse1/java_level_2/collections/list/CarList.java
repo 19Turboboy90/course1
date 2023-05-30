@@ -1,13 +1,14 @@
 package ru.zharinov.javacourse1.java_level_2.collections.list;
 
 import ru.zharinov.javacourse1.java_level_2.collections.Car;
+import ru.zharinov.javacourse1.java_level_2.collections.CarCollection;
 
-public interface CarList {
+public interface CarList extends CarCollection {
     Car get(int index);
 
-    void add(Car car);
+    boolean add(Car car);
 
-    void add(Car car, int index);
+    boolean add(Car car, int index);
 
     boolean remove(Car car);
 
