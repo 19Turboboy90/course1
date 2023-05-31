@@ -3,6 +3,8 @@ package ru.zharinov.javacourse1.java_level_2.collections.list;
 
 import ru.zharinov.javacourse1.java_level_2.collections.Car;
 
+import java.util.Iterator;
+
 public class CarLinkedList implements CarList {
     private Node first;
     private Node last;
@@ -113,6 +115,25 @@ public class CarLinkedList implements CarList {
             node = node.next;
         }
         return node;
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return new Iterator<Car>() {
+            private Node node = first;
+
+            @Override
+            public boolean hasNext() {
+                return node != null;
+            }
+
+            @Override
+            public Car next() {
+                Car car = node.value;
+                node = node.next;
+                return car;
+            }
+        };
     }
 
     private static class Node {

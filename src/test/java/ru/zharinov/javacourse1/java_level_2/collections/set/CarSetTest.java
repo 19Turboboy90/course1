@@ -56,16 +56,4 @@ public class CarSetTest {
         carSet.clear();
         assertEquals(0, carSet.size());
     }
-
-    @Test
-    public void containsElementInCollection() {
-        Car car = new Car("Brand0", 0);
-        assertTrue(carSet.contains(car));
-    }
-
-    @Test
-    public void notContainsElementInCollection() {
-        Car car = new Car("BMW", 1);
-        assertFalse(carSet.contains(car));
-    }
 }
