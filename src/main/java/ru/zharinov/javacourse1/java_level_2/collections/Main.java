@@ -1,5 +1,9 @@
 package ru.zharinov.javacourse1.java_level_2.collections;
 
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
+
 /*
 Задача:
 
@@ -28,9 +32,12 @@ boolean contains(Car car); - возвращает true, если данный о
  */
 public class Main {
     public static void main(String[] args) {
-        Car car1 = new Car("BMW", 1);
-        Car car2 = new Car("BMW", 1);
-        System.out.println(car1 == car2);
+        Set<Integer> integers = new TreeSet<>();
+        for (int i = 0; i < 10; i++) {
+            integers.add(new Random().nextInt(100));
+        }
 
+
+        integers.forEach(System.out::println);
     }
 }
