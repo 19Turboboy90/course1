@@ -5,18 +5,18 @@ import ru.zharinov.javacourse1.java_level_2.collections.Car;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class CarArrayList implements CarList {
-    private Car[] array = new Car[10];
+public class CarArrayList<T> implements CarList<T> {
+    private Object[] array = new Object[10];
     private int size = 0;
 
     @Override
-    public Car get(int index) {
+    public T get(int index) {
         checkIndex(index);
-        return array[index];
+        return (T) array[index];
     }
 
     @Override
-    public boolean add(Car car) {
+    public boolean add(T car) {
         increaseArray();
         array[size] = car;
         size++;
@@ -24,7 +24,7 @@ public class CarArrayList implements CarList {
     }
 
     @Override
-    public boolean add(Car car, int index) {
+    public boolean add(T car, int index) {
         increaseArray();
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
@@ -36,7 +36,7 @@ public class CarArrayList implements CarList {
     }
 
     @Override
-    public boolean remove(Car car) {
+    public boolean remove(T car) {
         int index = findElement(car);
         if (index != -1) {
             return removeAt(index);
@@ -59,16 +59,16 @@ public class CarArrayList implements CarList {
 
     @Override
     public void clear() {
-        array = new Car[10];
+        array = new Object[10];
         size = 0;
     }
 
     @Override
-    public boolean contains(Car car) {
+    public boolean contains(T car) {
         return findElement(car) != -1;
     }
 
-    private int findElement(Car car) {
+    private int findElement(T car) {
         for (int i = 0; i < size; i++) {
             if (car.equals(array[i])) {
                 return i;
@@ -90,8 +90,8 @@ public class CarArrayList implements CarList {
     }
 
     @Override
-    public Iterator<Car> iterator() {
-        return new Iterator<Car>() {
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
             int index = 0;
 
             @Override
@@ -100,8 +100,8 @@ public class CarArrayList implements CarList {
             }
 
             @Override
-            public Car next() {
-                return array[index++];
+            public T next() {
+                return (T) array[index++];
             }
         };
     }
